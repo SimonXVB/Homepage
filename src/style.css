@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    background-color: #363333;
+}
+
+.pattern {
+    position: absolute;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='70' height='70' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(144)'%3E%3Crect width='100%25' height='100%25' fill='rgba(42, 67, 101,0)'/%3E%3Cpath d='M-10 30h60v2h-60zM-10-10h60v2h-60' fill='rgba(225, 100, 40,1)'/%3E%3Cpath d='M-10 10h60v2h-60zM-10-30h60v2h-60z' fill='rgba(225, 100, 40,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+    background-repeat: repeat;
+    background-position: top;
+    width: 100%;
+    height: 150px;
+    margin-top: -80px;
+    z-index: -1;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    background-image: url("./assets/mountain.jpg");
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.name {
+    font-family: "Bebas Neue", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: white;
+    text-decoration: underline;
+    margin-left: 200px;
+}
+
+.sun {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #F6E9E9;
+    border-radius: 50%;
+    border: 2px solid #E16428;
+    transform: translateX(-190px);
+}
+
+.planet {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #E16428;
+    border-radius: 50%;
+    border: 2px solid #F6E9E9;
+    animation: rotate 6000ms linear infinite;
+}
+
+.link-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.gHub {
+    margin-right: 50px;
+    border: 2px solid #E16428;
+    border-radius: 5%;
+    background-color: #272121;
+    padding: 5px;
+}
+
+.twitter {
+    margin-left: 50px;
+    border: 2px solid #E16428;
+    border-radius: 5%;
+    background-color: #272121;
+    padding: 5px;
+}
+
+.gHub:hover, .twitter:hover, .svg-link:hover {
+    border: 2px solid #F6E9E9;
+    background-color: #E16428;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.header-projects {
+    font-family: "Bebas Neue", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    max-width: fit-content;
+    color: #F6E9E9;
+    border: 3px solid #E16428;
+    padding: 5px;
+    background-color: #272121;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.svg {
+    border: 2px solid #E16428;
+    padding: 10px;
+    border-radius: 10%;
+    background-color: #272121;
+}
+
+.svg-link {
+    border: 2px solid #E16428;
+    padding: 10px;
+    border-radius: 10%;
+    background-color: #272121;
+}
+
+.header-cards {
+    border-bottom: 3px solid #E16428;
+    font-family: "Bebas Neue", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    font-size: 2rem;
+    width: fit-content;
+    margin: 0;
+    padding: 5px;
+    color: #F6E9E9;
+}
+
+.container {
+    border: 5px solid black;
+    max-width: 600px;
+    min-height: 160px;
+}
+
+.desc {
+    font-family: "Bebas Neue", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    font-size: 1.7rem;
+    width: fit-content;
+    margin: 0;
+    padding-right: 15px;
+    padding-left: 5px;
+    color: #F6E9E9;
+}
+
+@keyframes rotate {
+    from {
+        transform: translateX(-190px) rotate(0turn) translateX(70px);
+    }
+
+    to{
+        transform: translateX(-190px) rotate(1turn) translateX(70px);
+    }
+}
+
+@media (max-width: 600px) {
+    .planet, .sun{
+        display: none;
+    }
+
+    .name {
+        margin-left: 0;
+    }
+
+    .header {
+     margin-top: 0;   
+    }
+}
+
+@media (max-width: 390px) {
+    .gHub {
+        margin-right: 25px;
+    }
+    
+    .twitter {
+        margin-left: 25px;
+    }
+
+    .header-projects {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1900px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .wrapper {
+        margin-bottom: 20px;
+    }
+}
